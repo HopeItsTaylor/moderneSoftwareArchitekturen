@@ -1,0 +1,20 @@
+title Portfolio 1 - Aufgabe 2
+
+Client->Server: start the game
+Client<--Server: returns the game
+Client->Server: goes right
+Client<--Server: is okay, went one to the right
+Client->Server: goes up
+Client<--Server: is not okay, end game
+note over Client,Server: new game must be started
+Client->Server: goes down
+Client<--Server: is okay, went one down
+Client->Server: goes right
+Client<--Server: is okay, went one to the up
+Client->Server: goes right
+Client<--Server: is not okay
+Client->Server: goes left
+Client<--Server: is okay, went one to the left
+note over Client,Server: as long, until you reach the goal
+Client->Server: goes right
+Client<--Server: is okay, is goal, succeed
