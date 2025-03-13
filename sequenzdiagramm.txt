@@ -10,7 +10,7 @@ note over Client,Server: new game must be started
 Client->Server: goes down
 Client<--Server: is okay, went one down
 Client->Server: goes right
-Client<--Server: is okay, went one to the up
+Client<--Server: is okay, went one to the right
 Client->Server: goes right
 Client<--Server: is not okay
 Client->Server: goes left
