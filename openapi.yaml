@@ -18,7 +18,7 @@ paths:
       description: Adds a new game and returns the game ID.
       operationId: addGame
       responses:
-        '200':
+        "200":
           description: Successful operation, game created
           content:
             application/json:
@@ -30,7 +30,7 @@ paths:
                     description: The ID of the created game
                 example:
                   id: 1
-        '400':
+        "400":
           description: Invalid input
   /game/{id}/move:
     post:
@@ -67,8 +67,8 @@ paths:
               example:
                 direction: "left"
       responses:
-        '200':
-          description: Move successful
+        "200":
+          description: Move request successful
           content:
             application/json:
               schema:
@@ -76,15 +76,15 @@ paths:
                 properties:
                   status:
                     type: string
-                    enum: ["blocked", "success", "invalid"]
-                    description: The status of the move
+                    enum: ["blocked", "success", "failed"]
+                    description: The status of the move (blocked, if there's a wall; success, if the move succeeded; failed, if moving out of bounds)
                   position:
                     type: string
                     description: The new position of the player
                     example: "A3"
-        '400':
+        "400":
           description: Invalid input
-        '404':
+        "404":
           description: Game not found
 components:
   schemas:
@@ -105,7 +105,7 @@ components:
           example: left, right, up, down
         status:
           type: string
-          example: blocked, success, invalid
+          example: blocked, success, failed
         position:
           type: string
           example: A3
